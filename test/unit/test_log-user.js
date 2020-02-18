@@ -14,7 +14,7 @@ global.httpClient = {
 	send: function(s) {}
 };
 
-GLOBAL.Request = function(s) {};
+global.Request = function(s) {};
 
 var contextGetVariableMethod, contextSetVariableMethod;
 var httpClientSendMethod;
