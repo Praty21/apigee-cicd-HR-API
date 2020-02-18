@@ -5,12 +5,12 @@ var sinon = require('sinon');
 var jsFile = '../../HR-API/apiproxy/resources/jsc/Logging-User-Setting-ID.js';
 
 
-GLOBAL.context = {
+global.context = {
 	getVariable: function(s) {},
 	setVariable: function(s) {}
 };
 
-GLOBAL.httpClient = {
+global.httpClient = {
 	send: function(s) {}
 };
 
@@ -25,7 +25,7 @@ var requestConstructor;
 beforeEach(function () {
 	contextGetVariableMethod = sinon.stub(context, 'getVariable');
 	contextSetVariableMethod = sinon.stub(context, 'setVariable');
-	requestConstructor = sinon.spy(GLOBAL, 'Request');
+	requestConstructor = sinon.spy(global, 'Request');
 	httpClientSendMethod = sinon.stub(httpClient, 'send');
 });
 
